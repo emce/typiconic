@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Typiconic</string>
+    <string name="menu_share">Udostępnij</string>
+    <string name="menu_about">O bibliotece</string>
+    <string name="share_action">Uatrakcyjnij swoją aplikację z #Typiconify!
+        http://cwiklinski.mobi/typiconify/</string>
+    <string name="share_chooser">Udostępnij …</string>
+    <string name="bullet1">Biblioteka Open Source</string>
+    <string name="bullet2">Dostępna w Maven Central</string>
+    <string name="bullet3">Typicons 2.0.1</string>
+    <string name="bullet4">Licencja Apache v2</string>
+    <string name="bullet5">\@em__ce</string>
+    <string name="share_button">{ti-export} Udostępnij</string>
+    <string name="website_button">{ti-link-outline} Strona WWW</string>
+</resources>

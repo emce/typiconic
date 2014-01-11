@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Typiconic</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_about">About</string>
+    <string name="share_action">Beautify your apps with #Typiconify!
+        http://cwiklinski.mobi/typiconify/</string>
+    <string name="share_chooser">Share …</string>
+    <string name="bullet1">Open Source library</string>
+    <string name="bullet2">Available in maven central</string>
+    <string name="bullet3">Typicons 2.0.1</string>
+    <string name="bullet4">Apache v2 license</string>
+    <string name="bullet5">\@em__ce</string>
+    <string name="share_button">{ti-export} Share</string>
+    <string name="website_button">{ti-link-outline} Website</string>
+</resources>

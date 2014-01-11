@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grid_item">#FFFFFFFF</color>
+    <color name="grey_light">#FFEFEFEF</color>
+    <color name="text">#FF666666</color>
+    <color name="blue">#FF3fa9f5</color>
+    <color name="icon_shadow">#22000000</color>
+    <color name="description">#FFaaaaaa</color>
+    <color name="black">#000000</color>
+</resources>
