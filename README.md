@@ -3,7 +3,9 @@ Typiconic
 
 ![](screen.png)
 
-Based on Iconic from **[JoanZapata's android-iconify (370)](https://www.github.com/JoanZapata/android-iconify)** library, allowing to use all advantages of icon font named **[Typicons (370)](http://typicons.com/)**.
+Based on Iconic from **[JoanZapata's android-iconify](https://www.github.com/JoanZapata/android-iconify)** library, allowing to use all advantages of 308 icon font named **[Typicons](http://typicons.com/)**.
+
+![](typicons.png)
 
 This library adds 2 new widgets to Android, that is ```TypiconTextView``` and ```TypiconButton```. These two widget allows anybody to put icon before text or just icon in text widget.
 
