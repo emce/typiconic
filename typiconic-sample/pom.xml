@@ -72,7 +72,7 @@
                                     <includes>
                                         <include>target/*.apk</include>
                                     </includes>
-                                    <keystore>${project.baseUri}keystore</keystore>
+                                    <keystore>../key/release.keystore</keystore>
                                     <storepass>${password}</storepass>
                                     <keypass>${password}</keypass>
                                     <alias>typiconic</alias>

@@ -32,7 +32,7 @@ public class UtilsTest {
 
     @Test
     public void test_replaceIcons() {
-        test("A{ta_anchor}A", "A" + ti_anchor.character + "A");
+        test("A{ti-anchor}A", "A" + ti_anchor.character + "A");
     }
 
     @Test
