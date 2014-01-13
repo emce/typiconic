@@ -1,0 +1,44 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 19
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        versionName project.VERSION_NAME
+    }
+
+
+    signingConfigs {
+
+        release {
+            storeFile file('../key/release.keystore')
+            storePassword 'm2gSDscHXhJvo2Q688VlIxIu0'
+            keyPassword 'm2gSDscHXhJvo2Q688VlIxIu0'
+            keyAlias 'typiconic'
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            runProguard false
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:appcompat-v7:+'
+    debugCompile project(':typiconic')
+}

@@ -59,7 +59,7 @@ public class AboutActivity extends ActionBarActivity {
             R.id.menu_group_main, R.id.menu_share, 100, R.string.menu_share);
         MenuItemCompat.setShowAsAction(item,
             MenuItemCompat.SHOW_AS_ACTION_ALWAYS | MenuItemCompat.SHOW_AS_ACTION_WITH_TEXT);
-        Drawable shareDrawable = new TypiconicDrawable(this, Typiconify.IconValue.ti_export)
+        Drawable shareDrawable = new TypiconicDrawable(this, Typiconify.IconValue.ti_social_at_circular)
             .colorRes(R.color.black)
             .actionBarSize();
         item.setIcon(shareDrawable);
