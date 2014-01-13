@@ -18,7 +18,6 @@
  */
 package mobi.cwiklinski.typiconic;
 
-import android.R;
 import android.content.Context;
 import android.util.Log;
 
@@ -47,7 +46,7 @@ class Utils {
 
     static boolean isEnabled(int[] stateSet) {
         for (int state : stateSet)
-            if (state == R.attr.state_enabled)
+            if (state == android.R.attr.state_enabled)
                 return true;
         return false;
     }

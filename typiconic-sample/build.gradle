@@ -1,5 +1,11 @@
 apply plugin: 'android'
 
+dependencies {
+    compile project(':typiconic')
+    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:appcompat-v7:+'
+}
+
 android {
     compileSdkVersion 19
     buildToolsVersion "19.0.1"
@@ -35,10 +41,4 @@ android {
         }
 
     }
-}
-
-dependencies {
-    compile 'com.android.support:support-v4:+'
-    compile 'com.android.support:appcompat-v7:+'
-    debugCompile project(':typiconic')
 }
