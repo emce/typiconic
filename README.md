@@ -11,6 +11,12 @@ This library adds 2 new widgets to Android, that is ```TypiconTextView``` and ``
 
 One can also use ```TypiconicDrawable``` to generate Drawable based on any glyph from font.
 
+Sample application
+------------------
+Get sample application from Google Play
+
+[![Alt](http://developer.android.com/images/brand/en_app_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=mobi.cwiklinski.typiconic_sample)
+
 Get it
 ------
 Grab the [JAR][1] or add a dependency from Maven central:
