@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <TypiconTextView xmlns:android="http://schemas.android.com/apk/res/android"
-          android:id="@+id/icon_text"
-          android:gravity="left"
-          android:paddingTop="@dimen/small_gap"
-          android:paddingBottom="@dimen/small_gap"
-          android:paddingLeft="@dimen/small_gap"
-          android:textSize="@dimen/item_text_size"
-          android:singleLine="true"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+    android:id="@+id/icon_text"
+    android:gravity="left"
+    android:paddingTop="@dimen/small_gap"
+    android:paddingBottom="@dimen/small_gap"
+    android:paddingLeft="@dimen/small_gap"
+    android:textSize="@dimen/item_text_size"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />

@@ -4,6 +4,6 @@
     <dimen name="small_gap">10dp</dimen>
     <dimen name="big_gap">25dp</dimen>
     <dimen name="big_text_size">22sp</dimen>
-    <dimen name="item_text_size">16sp</dimen>
-    <dimen name="dialog_icon_size">80sp</dimen>
+    <dimen name="item_text_size">18sp</dimen>
+    <dimen name="dialog_icon_size">150sp</dimen>
 </resources>

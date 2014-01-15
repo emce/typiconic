@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="grey_light">#FFEFEFEF</color>
     <color name="icon_shadow">#22000000</color>
     <color name="description">#FFaaaaaa</color>
     <color name="black">#000000</color>
