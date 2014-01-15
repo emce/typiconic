@@ -17,7 +17,7 @@ Grab the [JAR][1] or add a dependency from Maven central:
 
 ```groovy
 dependencies {
-  debugCompile 'mobi.cwiklinski:typiconic:1.0.0'
+  debugCompile 'mobi.cwiklinski:typiconic:1.0.1'
 }
 ```
 License
@@ -39,4 +39,4 @@ License
 
 
 
- [1]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=mobi.cwiklinski&a=typiconic&v=LATEST&c=jar
+ [1]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=mobi.cwiklinski&a=typiconic&v=1.0.1
