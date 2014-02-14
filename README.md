@@ -11,6 +11,13 @@ This library adds 2 new widgets to Android, that is ```TypiconTextView``` and ``
 
 One can also use ```TypiconicDrawable``` to generate Drawable based on any glyph from font.
 
+ChangeLog
+------------------
+v.1.0.2
+ - Typicons font updated to version 2.0.3 (336 glyphs)
+v.1.0.1
+ - added *.jar
+
 Sample application
 ------------------
 Get sample application from Google Play
@@ -23,7 +30,7 @@ Grab the [JAR][1] or add a dependency from Maven central:
 
 ```groovy
 dependencies {
-  debugCompile 'mobi.cwiklinski:typiconic:1.0.1'
+  debugCompile 'mobi.cwiklinski:typiconic:1.0.2'
 }
 ```
 License
@@ -45,4 +52,4 @@ License
 
 
 
- [1]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=mobi.cwiklinski&a=typiconic&v=1.0.1
+ [1]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=mobi.cwiklinski&a=typiconic&v=1.0.2
