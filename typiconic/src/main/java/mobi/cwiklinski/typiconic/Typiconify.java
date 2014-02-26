@@ -21,6 +21,8 @@ package mobi.cwiklinski.typiconic;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.style.TypefaceSpan;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -42,10 +44,11 @@ public final class Typiconify {
     }
 
     /** Transform the given TextViews replacing {icon_xxx} texts with icons. */
-    public static final void addIcons(TextView... textViews) {
+    public static void addIcons(TextView... textViews) {
         for (TextView textView : textViews) {
-            textView.setTypeface(getTypeface(textView.getContext()));
-            textView.setText(compute(textView.getText()));
+            /*textView.setTypeface(getTypeface(textView.getContext()));
+            textView.setText(compute(textView.getText()));*/
+            parseTextView(textView);
         }
     }
 
@@ -63,11 +66,16 @@ public final class Typiconify {
         textView.setText(valueOf(value.character));
     }
 
+    public static void parseTextView(TextView textView) {
+        Utils.parseIcons(new StringBuilder(textView.getText().toString()),
+            getTypeface(textView.getContext()), textView.getCurrentTextColor());
+    }
+
     /**
      * The typeface that contains Typicons icons.
      * @return the typeface, or null if something goes wrong.
      */
-    public static final Typeface getTypeface(Context context) {
+    public static Typeface getTypeface(Context context) {
         if (typeface == null) {
             try {
                 typeface = Typeface.createFromFile(resourceToFile(context, TTF_FILE));

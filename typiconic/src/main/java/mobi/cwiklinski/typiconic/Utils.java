@@ -19,6 +19,11 @@
 package mobi.cwiklinski.typiconic;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.TextPaint;
+import android.text.style.TypefaceSpan;
 import android.util.Log;
 
 import java.io.BufferedOutputStream;
@@ -109,6 +114,83 @@ class Utils {
         } catch (IllegalArgumentException e) {
             Log.w(Typiconify.TAG, "Wrong icon name: " + iconString);
             return text;
+        }
+    }
+
+    public static StringBuilder parseIcons(StringBuilder text, Typeface typeface, Integer color) {
+        int startIndex = text.indexOf("{ti");
+        if (startIndex == -1) {
+            return text;
+        }
+
+        int endIndex = text.substring(startIndex).indexOf("}") + startIndex + 1;
+
+        String iconString = text.substring(startIndex + 1, endIndex - 1);
+        iconString = iconString.replaceAll("-", "_");
+        try {
+            IconValue value = IconValue.valueOf(iconString);
+            String iconValue = String.valueOf(value.character);
+            text = text.replace(startIndex, endIndex, iconValue);
+
+            SpannableString s = new SpannableString(text);
+            s.setSpan(
+                new AwesomeTypefaceSpan(typeface, color),                startIndex,
+                iconValue.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            return parseIcons(text, typeface, color);
+
+        } catch (IllegalArgumentException e) {
+            Log.w(Typiconify.TAG, "Wrong icon name: " + iconString);
+            return text;
+        }
+    }
+
+    static class AwesomeTypefaceSpan extends TypefaceSpan {
+
+        private final Typeface newType;
+        private Integer mColor;
+
+        public AwesomeTypefaceSpan(Typeface type, Integer color) {
+            super("");
+            newType = type;
+            if (color != null && color > 0) {
+                mColor = color;
+            }
+        }
+
+        @Override
+        public void updateDrawState(TextPaint paint) {
+            applyCustomTypeFace(paint, newType);
+        }
+
+        @Override
+        public void updateMeasureState(TextPaint paint) {
+            applyCustomTypeFace(paint, newType);
+        }
+
+        private void applyCustomTypeFace(TextPaint paint, Typeface tf) {
+            int oldStyle;
+            Typeface old = paint.getTypeface();
+            if (old == null) {
+                oldStyle = 0;
+            } else {
+                oldStyle = old.getStyle();
+            }
+
+            int fake = oldStyle & ~tf.getStyle();
+            if ((fake & Typeface.BOLD) != 0) {
+                paint.setFakeBoldText(true);
+            }
+
+            if ((fake & Typeface.ITALIC) != 0) {
+                paint.setTextSkewX(-0.25f);
+            }
+
+            paint.setTypeface(tf);
+            if (mColor != null) {
+                paint.setColor(mColor);
+            }
+            paint.setUnderlineText(false);
         }
     }
 }
