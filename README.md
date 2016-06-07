@@ -1,4 +1,4 @@
-Typiconic
+Typiconic (unmaintained)
 =========
 
 ![](screen.png)
